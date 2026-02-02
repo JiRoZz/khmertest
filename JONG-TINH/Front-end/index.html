@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JONG-TINH-STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="welcome-text">Welcome back!</div>
+            <div class="user-name">JONG TINH-STORE</div>
+            <img src="./img/photo_2025-01-08_15-59-43.jpg" 
+                 alt="Profile" class="profile-pic">
+            
+            <!-- Categories -->
+            <div class="categories">
+                <div class="category active">All product</div>
+                <div class="category">Sneakers</div>
+                <div class="category">Jackets</div>
+                <div class="category">Accessories</div>
+            </div>
+        </header>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <div class="contact-content">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/rothdaro.daro.1" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/jiro_uvu_7" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@jongtinh7?_r=1&_t=ZS-93ZZMwMmPCc" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ji_ro_07?igsh=bGIxbzJnY3BrZHY5&utm_source=qr" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Section -->
+        <div class="section-header">
+            <div class="section-title">All Products</div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="products-search">
+            <input type="text" class="search-input" placeholder="Search products...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="clear-search" style="display:none;"><i class="fas fa-times"></i></button>
+        </div>
+
+        <!-- Search Results -->
+        <div id="search-results" class="search-results" style="display:none;">
+            <div class="search-results-header">
+                <h3>Search Results</h3>
+                <span id="results-count"></span>
+            </div>
+            <div class="search-results-grid"></div>
+            <div id="no-results" class="no-results" style="display:none;">
+                <i class="fas fa-search"></i>
+                <h4>No products found</h4>
+                <p>Try searching with different keywords</p>
+            </div>
+        </div>
+
+        <!-- Featured Products -->
+        <section class="featured-section" id="featured-products">
+            <div class="section-header">
+                <div class="section-title">Featured Products</div>
+                <div class="see-more">See more</div>
+            </div>
+            
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="all-products-grid" id="all-products-grid">
+                <!-- All products will be loaded here dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profile-page" class="profile-page">
+        <div class="back-to-home">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+        
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="" alt="" class="profile-large-pic">
+                <h2>Your Name</h2>
+                <div class="profile-email">youremail@example.com</div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Orders</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Wishlist</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0.0</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-details">
+                <div class="profile-item">
+                    <i class="fas fa-user"></i>
+                    <div class="profile-info">
+                        <h4>Personal Information</h4>
+                        <p>Update your personal details</p>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="profile-info">
+                        <h4>My Orders</h4>
+                        <p>Track and view your orders</p>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-heart"></i>
+                    <div class="profile-info">
+                        <h4>Wishlist</h4>
+                        <p>View your saved items</p>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-cog"></i>
+                    <div class="profile-info">
+                        <h4>Settings</h4>
+                        <p>App and notification settings</p>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-question-circle"></i>
+                    <div class="profile-info">
+                        <h4>Help & Support</h4>
+                        <p>FAQs and customer support</p>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            
+            <div class="profile-actions">
+                <button class="profile-btn edit-profile">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+                <button class="profile-btn logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-product-image">
+                <img id="modalProductImage" src="" alt="Product">
+            </div>
+            <div class="modal-product-details">
+                <h3 id="modalProductName"></h3>
+                <div class="modal-rating" id="modalRating"></div>
+                <div class="modal-price" id="modalPrice"></div>
+                <div class="modal-stock" id="modalStock"></div>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-actions">
+                    <button class="add-to-cart-modal">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3><i class="fas fa-shopping-cart"></i> Checkout</h3>
+                <button class="close-checkout">&times;</button>
+            </div>
+            
+            <form id="checkoutForm" class="checkout-form">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h4><i class="fas fa-user"></i> Personal Information</h4>
+                    <div class="form-group">
+                        <input type="text" id="customerName" placeholder="Full Name *" required>
+                    </div>
+                    <div class="phone-group">
+                        <select id="countryCode">
+                            <option value="+855">🇰🇭 +855</option>
+                            <option value="+84">🇻🇳 +84</option>
+                            <option value="+66">🇹🇭 +66</option>
+                            <option value="+1">🇺🇸 +1</option>
+                        </select>
+                        <input type="tel" id="customerPhone" placeholder="Phone Number *" required>
+                    </div>
+                </div>
+                
+                <!-- Delivery Address -->
+                <div class="form-section">
+                    <h4><i class="fas fa-map-marker-alt"></i> Delivery Address</h4>
+                    <div class="form-group">
+                        <select id="province" required>
+                            <option value="">Select Province/City *</option>
+                            <option value="Phnom Penh">Phnom Penh</option>
+                            <option value="Siem Reap">Siem Reap</option>
+                            <option value="Preah Sihanouk">Preah Sihanouk</option>
+                            <option value="Battambang">Battambang</option>
+                            <option value="Kampong Cham">Kampong Cham</option>
+                            <option value="Kandal">Kandal</option>
+                            <option value="Kampong Speu">Kampong Speu</option>
+                            <option value="Takeo">Takeo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="district" placeholder="District *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="commune" placeholder="Commune *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="address" placeholder="Street address, building, house number... *" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="notes" placeholder="Delivery notes (Optional)" rows="2"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Payment Method -->
+                <div class="form-section">
+                    <h4><i class="fas fa-credit-card"></i> Payment Method</h4>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cash" checked>
+                            <div class="payment-content">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </div>
+                        </label>
+                        <label  class="payment-option">
+                            <input id="btn" onclick="modal.hidden^=1"this.hidden  type="radio" name="payment" value="aba">
+                            <div class="payment-content">
+                                <span">ABA</span>
+                                <span>ABA Pay</span>
+                            </div>
+                            <div id="modal" hidden onclick="closeModal()" aria-label="Close modal">
+                                <div class="QR">
+                                    <i class="fa-solid fa-x"></i>
+                                    <img src="./img/photo_2026-02-02_08-46-40.jpg" alt="">
+                                </div>
+                            </div>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="acleda">
+                            <div class="payment-content">
+                                <span>ACLEDA</span>
+                                <span>Acleda Bank</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="form-section">
+                    <h4><i class="fas fa-receipt"></i> Order Summary</h4>
+                    <div class="order-summary" id="modalOrderSummary">
+                        <!-- Order items will be inserted here -->
+                    </div>
+                    <div class="order-total">
+                        <span>Total:</span>
+                        <span id="modalOrderTotal">$0.00</span>
+                    </div>
+                </div>
+                
+                <!-- Terms & Conditions -->
+                <div class="form-section">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and confirm that my information is correct.</span>
+                    </label>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="checkout-actions">
+                    <button type="button" class="cancel-checkout">Cancel</button>
+                    <button type="submit" class="submit-order">
+                        <i class="fas fa-paper-plane"></i> Place Order & Send to Telegram
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Order Submitted Successfully!</h3>
+            <p>Your order has been created and sent to the store owner via Telegram.</p>
+            
+            <div class="order-details">
+                <div class="detail-item">
+                    <span>Order ID:</span>
+                    <strong id="generatedOrderId">JTS-123456</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Status:</span>
+                    <span class="status pending">Pending</span>
+                </div>
+                <div class="detail-item">
+                    <span>Delivery Fee:</span>
+                    <span>$2.00</span>
+                </div>
+            </div>
+            
+            <div class="telegram-note">
+                <i class="fab fa-telegram"></i>
+                <p>The store owner will contact you on Telegram to confirm your order.</p>
+            </div>
+            
+            <div class="success-actions">
+                <button class="close-success">Continue Shopping</button>
+                <a href="https://t.me/jiro_uvu_7" target="_blank" class="telegram-link">
+                    <i class="fab fa-telegram"></i> Open Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Filters</h3>
+            <button class="close-sidebar">&times;</button>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Rating</h4>
+            <div class="filter-options">
+                <label><input type="checkbox" name="rating" value="5"> 5 Stars</label>
+                <label><input type="checkbox" name="rating" value="4"> 4 Stars & Above</label>
+                <label><input type="checkbox" name="rating" value="3"> 3 Stars & Above</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Brand</h4>
+            <div class="filter-options">
+                <label><input type="checkbox" name="brand" value="nike"> Nike</label>
+                <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                <label><input type="checkbox" name="brand" value="puma"> Puma</label>
+                <label><input type="checkbox" name="brand" value="newbalance"> New Balance</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Size</h4>
+            <div class="size-options">
+                <button class="size-btn">S</button>
+                <button class="size-btn">M</button>
+                <button class="size-btn">L</button>
+                <button class="size-btn">XL</button>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Color</h4>
+            <div class="color-options">
+                <div class="color-option" style="background-color: #000;"></div>
+                <div class="color-option" style="background-color: #fff; border: 1px solid #ddd;"></div>
+                <div class="color-option" style="background-color: #e74c3c;"></div>
+                <div class="color-option" style="background-color: #3498db;"></div>
+                <div class="color-option" style="background-color: #2ecc71;"></div>
+            </div>
+        </div>
+        
+        <div class="sellers-section">
+            <h4>Top Sellers</h4>
+            <div class="sellers-list">
+                <div class="seller-item">Nike Store</div>
+                <div class="seller-item">Adidas Official</div>
+                <div class="seller-item">Sport Fashion</div>
+                <div class="seller-item see-more">See more sellers...</div>
+            </div>
+        </div>
+        
+        <button class="apply-filters">Apply Filters</button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Filter Toggle Button -->
+    <button class="filter-toggle">
+        <i class="fas fa-filter"></i> Filters
+    </button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item active" data-target="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#products" class="nav-item" data-target="products">
+            <i class="fas fa-th-large"></i>
+            <span>Products</span>
+        </a>
+        <a href="#cart" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+            <span class="cart-count">0</span>
+        </a>
+        <a href="#profile" class="nav-item" data-target="profile">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- Overlay for modals -->
+    <div class="overlay"></div>
+
+   <script src="script.js"></script>
+</body>
+</html>
